@@ -1,10 +1,11 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: postgres-pvc
+  name: my-manual-pvc
 spec:
+  storageClassName: ebs-sc # This should match the storageClassName of the PV
   accessModes:
-  - ReadWriteOnce
+    - ReadWriteOnce
   resources:
     requests:
-      storage: 10Gi
+      storage: 20Gi # This should be equal or less than the capacity of the PV
