@@ -16,7 +16,7 @@ COPY . .
 # Set environment variables
 ENV DB_USERNAME=postgres \
     DB_PASSWORD=${POSTGRES_PASSWORD} \
-    DB_HOST=postgres.default.svc.cluster.local \
+    DB_HOST=postgres-postgresql.default.svc.cluster.local \
     DB_PORT=5432 \
     DB_NAME=postgres
 
